@@ -1,56 +1,54 @@
-/* =========================================================
-   HARSHIT GAIROLA — PORTFOLIO JAVASCRIPT
-   ========================================================= */
+// =========================
+// MOBILE NAVIGATION
+// =========================
 
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-/* ================= MOBILE MENU ================= */
+if (menuToggle && navLinks) {
 
-const menuButton = document.getElementById("menuButton");
-const navLinks = document.querySelector(".nav-links");
-
-if (menuButton && navLinks) {
-
-    menuButton.addEventListener("click", () => {
+    menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("show");
 
         if (navLinks.classList.contains("show")) {
-            menuButton.textContent = "✕";
+            menuToggle.textContent = "✕";
         } else {
-            menuButton.textContent = "☰";
+            menuToggle.textContent = "☰";
         }
+    });
+
+
+    // Close menu after clicking a navigation link
+
+    const links = navLinks.querySelectorAll("a");
+
+    links.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("show");
+
+            menuToggle.textContent = "☰";
+
+        });
+
     });
 
 }
 
 
-/* ================= CLOSE MOBILE MENU ================= */
-
-const navigationLinks = document.querySelectorAll(".nav-links a");
-
-navigationLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("show");
-
-        if (menuButton) {
-            menuButton.textContent = "☰";
-        }
-
-    });
-
-});
-
-
-/* ================= ACTIVE NAVIGATION ================= */
+// =========================
+// ACTIVE NAVIGATION LINK
+// =========================
 
 const sections = document.querySelectorAll("section[id]");
+const navigationLinks = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll", () => {
+function updateActiveLink() {
 
     let currentSection = "";
 
-    sections.forEach(section => {
+    sections.forEach((section) => {
 
         const sectionTop = section.offsetTop - 150;
         const sectionHeight = section.offsetHeight;
@@ -65,7 +63,7 @@ window.addEventListener("scroll", () => {
     });
 
 
-    navigationLinks.forEach(link => {
+    navigationLinks.forEach((link) => {
 
         link.classList.remove("active");
 
@@ -77,48 +75,43 @@ window.addEventListener("scroll", () => {
 
     });
 
-});
+}
+
+window.addEventListener("scroll", updateActiveLink);
+
+updateActiveLink();
 
 
-/* ================= NAVBAR SHADOW ================= */
+// =========================
+// CURRENT YEAR
+// =========================
 
-const navbar = document.querySelector(".navbar");
+const yearElement = document.getElementById("year");
 
-window.addEventListener("scroll", () => {
+if (yearElement) {
 
-    if (!navbar) return;
+    yearElement.textContent = new Date().getFullYear();
 
-    if (window.scrollY > 50) {
-
-        navbar.style.background = "rgba(8, 8, 12, 0.85)";
-        navbar.style.backdropFilter = "blur(15px)";
-        navbar.style.borderBottom = "1px solid rgba(255, 255, 255, 0.08)";
-
-    } else {
-
-        navbar.style.background = "transparent";
-        navbar.style.backdropFilter = "none";
-        navbar.style.borderBottom = "none";
-
-    }
-
-});
+}
 
 
-/* ================= SCROLL REVEAL ================= */
+// =========================
+// SCROLL REVEAL
+// =========================
 
 const revealElements = document.querySelectorAll(
-    ".section-heading, .about-text, .stat-card, .skill-card, .project-card, .service-card, .contact-card"
+    ".section-heading, .about-text, .stat-card, .skill-card, .project-card, .timeline-item, .contact-card"
 );
 
 const revealObserver = new IntersectionObserver(
     (entries, observer) => {
 
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
 
             if (entry.isIntersecting) {
 
-                entry.target.classList.add("reveal-visible");
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
 
                 observer.unobserve(entry.target);
 
@@ -133,172 +126,82 @@ const revealObserver = new IntersectionObserver(
 );
 
 
-revealElements.forEach(element => {
+revealElements.forEach((element) => {
 
-    element.classList.add("reveal");
+    element.style.opacity = "0";
+    element.style.transform = "translateY(25px)";
+    element.style.transition = "opacity 0.7s ease, transform 0.7s ease";
 
     revealObserver.observe(element);
 
 });
 
 
-/* ================= PROJECT IMAGE FALLBACK ================= */
+// =========================
+// PROJECT LINK CHECK
+// =========================
 
-const projectImages = document.querySelectorAll(".project-image img");
+const projectLinks = document.querySelectorAll(".project-link");
 
-projectImages.forEach(image => {
+projectLinks.forEach((link) => {
 
-    image.addEventListener("error", () => {
+    link.addEventListener("click", (event) => {
 
-        image.style.display = "none";
+        const url = link.getAttribute("href");
 
-    });
+        if (!url || url === "#") {
 
-});
+            event.preventDefault();
 
-
-/* ================= CURRENT YEAR ================= */
-
-const copyright = document.querySelector(".copyright");
-
-if (copyright) {
-
-    copyright.innerHTML =
-        `© ${new Date().getFullYear()} Harshit Gairola. All Rights Reserved.`;
-
-}
-
-
-/* ================= BUTTON RIPPLE EFFECT ================= */
-
-const buttons = document.querySelectorAll(".btn");
-
-buttons.forEach(button => {
-
-    button.addEventListener("click", function (event) {
-
-        const ripple = document.createElement("span");
-
-        const rect = this.getBoundingClientRect();
-
-        const size = Math.max(rect.width, rect.height);
-
-        ripple.style.width = size + "px";
-        ripple.style.height = size + "px";
-
-        ripple.style.left =
-            event.clientX - rect.left - size / 2 + "px";
-
-        ripple.style.top =
-            event.clientY - rect.top - size / 2 + "px";
-
-        ripple.classList.add("ripple");
-
-        this.appendChild(ripple);
-
-        setTimeout(() => {
-
-            ripple.remove();
-
-        }, 600);
-
-    });
-
-});
-
-
-/* ================= PROJECT CARD HOVER ================= */
-
-const projectCards = document.querySelectorAll(".project-card");
-
-projectCards.forEach(card => {
-
-    card.addEventListener("mouseenter", () => {
-
-        card.style.transition = "transform 0.35s ease";
-
-    });
-
-});
-
-
-/* ================= TYPING EFFECT ================= */
-
-const heroRole = document.querySelector(".hero h2");
-
-if (heroRole) {
-
-    const roles = [
-        "Frontend Web Developer",
-        "Website Designer",
-        "Frontend Developer"
-    ];
-
-    let roleIndex = 0;
-    let characterIndex = 0;
-    let deleting = false;
-
-    function typeRole() {
-
-        const currentRole = roles[roleIndex];
-
-        if (!deleting) {
-
-            heroRole.textContent =
-                currentRole.substring(0, characterIndex + 1);
-
-            characterIndex++;
-
-            if (characterIndex === currentRole.length) {
-
-                deleting = true;
-
-                setTimeout(typeRole, 1800);
-
-                return;
-            }
-
-        } else {
-
-            heroRole.textContent =
-                currentRole.substring(0, characterIndex - 1);
-
-            characterIndex--;
-
-            if (characterIndex === 0) {
-
-                deleting = false;
-
-                roleIndex++;
-
-                if (roleIndex >= roles.length) {
-                    roleIndex = 0;
-                }
-
-            }
+            alert("Project link is not available yet.");
 
         }
 
-        setTimeout(
-            typeRole,
-            deleting ? 45 : 85
+    });
+
+});
+
+
+// =========================
+// EMAIL BUTTON
+// =========================
+
+const emailButton = document.querySelector(
+    'a[href^="mailto:"]'
+);
+
+if (emailButton) {
+
+    emailButton.addEventListener("click", () => {
+
+        console.log(
+            "Opening email client for gairolaharshit2@gmail.com"
         );
 
-    }
-
-    typeRole();
+    });
 
 }
 
 
-/* ================= CONSOLE MESSAGE ================= */
+// =========================
+// BACK TO TOP
+// =========================
 
-console.log(
-    "%cHarshit Gairola | Frontend Web Developer",
-    "font-size: 18px; font-weight: bold;"
+const backToTop = document.querySelector(
+    '.footer a[href="#home"]'
 );
 
-console.log(
-    "%cWelcome to my portfolio!",
-    "font-size: 14px;"
-);
+if (backToTop) {
+
+    backToTop.addEventListener("click", (event) => {
+
+        event.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}

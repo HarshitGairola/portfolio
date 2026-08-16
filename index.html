@@ -4,115 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Harshit Gairola | Frontend Web Developer</title>
+    <meta
+        name="description"
+        content="Harshit Gairola — Web Developer Portfolio"
+    >
 
-    <meta name="description"
-          content="Harshit Gairola - Frontend Web Developer Portfolio. Explore websites and frontend projects.">
+    <title>Harshit Gairola | Web Developer</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 </head>
 
 <body>
 
     <!-- ================= NAVBAR ================= -->
+
     <header class="navbar">
 
-        <a href="#home" class="logo">
-            Harshit<span>.</span>
-        </a>
+        <div class="container nav-container">
 
-        <nav class="nav-links">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <a href="#home" class="logo">
+                HG<span>.</span>
+            </a>
 
-        <a href="#contact" class="nav-button">
-            Let's Talk
-        </a>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+            >
+                ☰
+            </button>
 
-        <button class="menu-button" id="menuButton">
-            ☰
-        </button>
+            <nav class="nav-links" id="navLinks">
+
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+            <a href="#contact" class="nav-button">
+                Let's Talk
+            </a>
+
+        </div>
 
     </header>
 
 
-    <!-- ================= HERO ================= -->
     <main>
+
+        <!-- ================= HERO ================= -->
 
         <section class="hero" id="home">
 
-            <div class="hero-content">
+            <div class="container hero-container">
 
-                <p class="hero-small">
-                    HELLO, I'M
-                </p>
+                <div class="hero-content">
 
-                <h1>
-                    Harshit <span>Gairola</span>
-                </h1>
+                    <p class="hero-small">
+                        HELLO, I'M
+                    </p>
 
-                <h2>
-                    Frontend Web Developer
-                </h2>
+                    <h1>
+                        Harshit
+                        <span>Gairola</span>
+                    </h1>
 
-                <p class="hero-description">
-                    I build modern, responsive and user-friendly websites
-                    using HTML, CSS and JavaScript.
-                </p>
+                    <h2>
+                        Web Developer
+                    </h2>
 
-                <div class="hero-buttons">
+                    <p class="hero-description">
+                        I build modern, responsive and user-friendly
+                        websites that turn ideas into real digital
+                        experiences.
+                    </p>
 
-                    <a href="#projects" class="btn primary-btn">
-                        View My Projects
-                    </a>
+                    <div class="hero-buttons">
 
-                    <a href="#contact" class="btn secondary-btn">
-                        Contact Me
-                    </a>
+                        <a
+                            href="#projects"
+                            class="btn primary-btn"
+                        >
+                            View My Projects
+                        </a>
+
+                        <a
+                            href="#contact"
+                            class="btn secondary-btn"
+                        >
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                    <div class="hero-links">
+
+                        <a
+                            href="https://github.com/HarshitGairola"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+
+                        <a
+                            href="https://harshitgairola.github.io/portfolio/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Portfolio ↗
+                        </a>
+
+                    </div>
 
                 </div>
 
-            </div>
 
+                <div class="hero-card">
 
-            <div class="hero-card">
+                    <div class="hero-card-glow"></div>
 
-                <div class="code-window">
+                    <div class="code-window">
 
-                    <div class="window-top">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                        <div class="window-top">
 
-                    <div class="code-content">
+                            <span></span>
+                            <span></span>
+                            <span></span>
 
-                        <p>
-                            <span class="code-purple">&lt;developer&gt;</span>
-                        </p>
+                        </div>
 
-                        <p class="indent">
-                            <span class="code-blue">name</span> =
-                            <span class="code-green">"Harshit Gairola"</span>
-                        </p>
+                        <div class="code-content">
 
-                        <p class="indent">
-                            <span class="code-blue">role</span> =
-                            <span class="code-green">"Frontend Developer"</span>
-                        </p>
+                            <p>
+                                <span class="purple">const</span>
+                                developer = {
+                            </p>
 
-                        <p class="indent">
-                            <span class="code-blue">skills</span> =
-                            <span class="code-green">["HTML", "CSS", "JS"]</span>
-                        </p>
+                            <p class="indent">
+                                name:
+                                <span class="green">
+                                    "Harshit Gairola"
+                                </span>,
+                            </p>
 
-                        <p>
-                            <span class="code-purple">&lt;/developer&gt;</span>
-                        </p>
+                            <p class="indent">
+                                role:
+                                <span class="green">
+                                    "Web Developer"
+                                </span>,
+                            </p>
+
+                            <p class="indent">
+                                skills: [
+                            </p>
+
+                            <p class="indent2">
+                                <span class="green">
+                                    "HTML"
+                                </span>,
+                            </p>
+
+                            <p class="indent2">
+                                <span class="green">
+                                    "CSS"
+                                </span>,
+                            </p>
+
+                            <p class="indent2">
+                                <span class="green">
+                                    "JavaScript"
+                                </span>,
+                            </p>
+
+                            <p class="indent2">
+                                <span class="green">
+                                    "Python"
+                                </span>,
+                            </p>
+
+                            <p class="indent2">
+                                <span class="green">
+                                    "C++"
+                                </span>,
+                            </p>
+
+                            <p class="indent2">
+                                <span class="green">
+                                    "Rust"
+                                </span>,
+                            </p>
+
+                            <p class="indent2">
+                                <span class="green">
+                                    "Assembly"
+                                </span>
+                            </p>
+
+                            <p class="indent">
+                                ]
+                            </p>
+
+                            <p>
+                                };
+                            </p>
+
+                        </div>
 
                     </div>
 
@@ -124,56 +239,91 @@
 
 
         <!-- ================= ABOUT ================= -->
-        <section class="section about-section" id="about">
 
-            <div class="section-heading">
-                <p>ABOUT ME</p>
-                <h2>Building websites that make an impact.</h2>
-            </div>
+        <section class="section" id="about">
 
-            <div class="about-grid">
+            <div class="container">
 
-                <div class="about-text">
+                <div class="section-heading">
 
-                    <p>
-                        I'm Harshit Gairola, a frontend web developer focused
-                        on creating modern and responsive websites.
-                    </p>
+                    <p>ABOUT ME</p>
 
-                    <p>
-                        I enjoy turning ideas and designs into functional
-                        websites using HTML, CSS and JavaScript.
-                    </p>
-
-                    <p>
-                        My portfolio contains real projects covering
-                        e-commerce, healthcare, fitness, sports and
-                        jewellery businesses.
-                    </p>
+                    <h2>
+                        Turning ideas into
+                        <span>web experiences.</span>
+                    </h2>
 
                 </div>
 
 
-                <div class="about-stats">
+                <div class="about-grid">
 
-                    <div class="stat-card">
-                        <strong>5+</strong>
-                        <span>Projects</span>
+                    <div class="about-text">
+
+                        <p>
+                            I'm Harshit Gairola, a Web Developer
+                            based in Gopeshwar, Chamoli,
+                            Uttarakhand, India.
+                        </p>
+
+                        <p>
+                            I enjoy designing and developing
+                            websites that are clean, responsive,
+                            functional and easy to use.
+                        </p>
+
+                        <p>
+                            My projects cover different types of
+                            businesses and organizations, including
+                            e-commerce, healthcare, fitness,
+                            jewellery and sports.
+                        </p>
+
                     </div>
 
-                    <div class="stat-card">
-                        <strong>3</strong>
-                        <span>Core Technologies</span>
-                    </div>
 
-                    <div class="stat-card">
-                        <strong>100%</strong>
-                        <span>Learning & Building</span>
-                    </div>
+                    <div class="about-stats">
 
-                    <div class="stat-card">
-                        <strong>∞</strong>
-                        <span>Ideas</span>
+                        <div class="stat-card">
+
+                            <strong>7</strong>
+
+                            <span>
+                                Programming & Web Languages
+                            </span>
+
+                        </div>
+
+                        <div class="stat-card">
+
+                            <strong>5+</strong>
+
+                            <span>
+                                Featured Web Projects
+                            </span>
+
+                        </div>
+
+                        <div class="stat-card">
+
+                            <strong>3rd</strong>
+
+                            <span>
+                                Year B.Tech CSE
+                            </span>
+
+                        </div>
+
+                        <div class="stat-card">
+
+                            <strong>2023</strong>
+
+                            <span>
+                                Class 12 — CBSE
+                            </span>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -184,76 +334,135 @@
 
 
         <!-- ================= SKILLS ================= -->
+
         <section class="section skills-section" id="skills">
 
-            <div class="section-heading">
-                <p>MY SKILLS</p>
-                <h2>Technologies I use.</h2>
-            </div>
+            <div class="container">
 
+                <div class="section-heading">
 
-            <div class="skills-grid">
+                    <p>MY SKILLS</p>
 
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        HTML
-                    </div>
-
-                    <h3>HTML5</h3>
-
-                    <p>
-                        Building clean and structured web pages
-                        with semantic HTML.
-                    </p>
+                    <h2>
+                        Technologies I
+                        <span>work with.</span>
+                    </h2>
 
                 </div>
 
 
-                <div class="skill-card">
+                <div class="skills-grid">
 
-                    <div class="skill-icon">
-                        CSS
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            01
+                        </div>
+
+                        <h3>HTML</h3>
+
+                        <p>
+                            Building structured and semantic
+                            web pages.
+                        </p>
+
                     </div>
 
-                    <h3>CSS3</h3>
 
-                    <p>
-                        Creating responsive layouts, animations
-                        and modern interfaces.
-                    </p>
+                    <div class="skill-card">
 
-                </div>
+                        <div class="skill-number">
+                            02
+                        </div>
 
+                        <h3>CSS</h3>
 
-                <div class="skill-card">
+                        <p>
+                            Creating responsive layouts,
+                            animations and modern interfaces.
+                        </p>
 
-                    <div class="skill-icon">
-                        JS
                     </div>
 
-                    <h3>JavaScript</h3>
 
-                    <p>
-                        Adding interactivity and dynamic functionality
-                        to websites.
-                    </p>
+                    <div class="skill-card">
 
-                </div>
+                        <div class="skill-number">
+                            03
+                        </div>
 
+                        <h3>JavaScript</h3>
 
-                <div class="skill-card">
+                        <p>
+                            Adding interaction, functionality
+                            and dynamic behaviour.
+                        </p>
 
-                    <div class="skill-icon">
-                        UI
                     </div>
 
-                    <h3>Responsive Design</h3>
 
-                    <p>
-                        Designing websites that work across
-                        desktop, tablet and mobile devices.
-                    </p>
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            04
+                        </div>
+
+                        <h3>Python</h3>
+
+                        <p>
+                            Programming, automation and
+                            application development.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            05
+                        </div>
+
+                        <h3>C++</h3>
+
+                        <p>
+                            Object-oriented programming,
+                            logic and problem solving.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            06
+                        </div>
+
+                        <h3>Rust</h3>
+
+                        <p>
+                            Exploring modern systems
+                            programming and performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            07
+                        </div>
+
+                        <h3>Assembly</h3>
+
+                        <p>
+                            Learning low-level programming
+                            and computer architecture.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -263,350 +472,333 @@
 
 
         <!-- ================= PROJECTS ================= -->
+
         <section class="section projects-section" id="projects">
 
-            <div class="section-heading">
+            <div class="container">
 
-                <p>MY WORK</p>
+                <div class="section-heading">
 
-                <h2>
-                    Featured Projects
-                </h2>
+                    <p>MY WORK</p>
 
-                <span>
-                    A collection of websites I've designed and developed.
-                </span>
+                    <h2>
+                        Selected
+                        <span>projects.</span>
+                    </h2>
 
-            </div>
-
-
-            <div class="projects-grid">
+                </div>
 
 
-                <!-- PROJECT 1 -->
-                <article class="project-card">
+                <div class="projects-grid">
 
-                    <div class="project-image">
 
-                        <img
-                            src="./image/web1.jpg"
-                            alt="NovaStore website"
-                            onerror="this.style.display='none'"
-                        >
+                    <!-- NOVASTORE -->
 
-                        <div class="project-number">
-                            01
+                    <article class="project-card">
+
+                        <div class="project-image project-one">
+
+                            <div class="project-overlay">
+
+                                <span>
+                                    E-COMMERCE
+                                </span>
+
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="project-content">
 
-                    <div class="project-content">
+                            <p class="project-category">
+                                WEB DEVELOPMENT
+                            </p>
 
-                        <span class="project-type">
-                            E-COMMERCE
-                        </span>
+                            <h3>
+                                NovaStore
+                            </h3>
 
-                        <h3>
-                            NovaStore
-                        </h3>
+                            <p>
+                                A modern e-commerce website
+                                designed to provide a clean
+                                shopping experience.
+                            </p>
 
-                        <p>
-                            A practice e-commerce website featuring
-                            products, modern layouts and interactive
-                            shopping elements.
-                        </p>
+                            <a
+                                href="https://harshitgairola.github.io/NovaStore/"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Live Project ↗
+                            </a>
 
-                        <div class="technology-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
                         </div>
 
-                        <a
-                            href="https://harshitgairola.github.io/Nova-Store/"
-                            class="project-link"
-                            target="_blank"
-                        >
-                            View Project →
-                        </a>
-
-                    </div>
-
-                </article>
+                    </article>
 
 
-                <!-- PROJECT 2 -->
-                <article class="project-card">
+                    <!-- DENTAL -->
 
-                    <div class="project-image">
+                    <article class="project-card">
 
-                        <img
-                            src="./image/web2.jpg"
-                            alt="Bharat Dental Hospital website"
-                            onerror="this.style.display='none'"
-                        >
+                        <div class="project-image project-two">
 
-                        <div class="project-number">
-                            02
+                            <div class="project-overlay">
+
+                                <span>
+                                    HEALTHCARE
+                                </span>
+
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="project-content">
 
-                    <div class="project-content">
+                            <p class="project-category">
+                                WEB DEVELOPMENT
+                            </p>
 
-                        <span class="project-type">
-                            HEALTHCARE
-                        </span>
+                            <h3>
+                                Bharat Dental Hospital
+                            </h3>
 
-                        <h3>
-                            Bharat Dental Hospital
-                        </h3>
+                            <p>
+                                A professional dental hospital
+                                website designed to present
+                                services and contact information.
+                            </p>
 
-                        <p>
-                            A professional dental website designed to
-                            present dental services, clinic information
-                            and patient-focused content.
-                        </p>
+                            <a
+                                href="https://harshitgairola.github.io/Bharat-Dental-Hospital/"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Live Project ↗
+                            </a>
 
-                        <div class="technology-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
                         </div>
 
-                        <a
-                            href="https://harshitgairola.github.io/Bharat-Dental-Hospital/"
-                            class="project-link"
-                            target="_blank"
-                        >
-                            View Project →
-                        </a>
-
-                    </div>
-
-                </article>
+                    </article>
 
 
-                <!-- PROJECT 3 -->
-                <article class="project-card">
+                    <!-- JEWELLERS -->
 
-                    <div class="project-image">
+                    <article class="project-card">
 
-                        <img
-                            src="./image/web3.jpg"
-                            alt="Fitness Factory Gym website"
-                            onerror="this.style.display='none'"
-                        >
+                        <div class="project-image project-three">
 
-                        <div class="project-number">
-                            03
+                            <div class="project-overlay">
+
+                                <span>
+                                    JEWELLERY
+                                </span>
+
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="project-content">
 
-                    <div class="project-content">
+                            <p class="project-category">
+                                WEB DEVELOPMENT
+                            </p>
 
-                        <span class="project-type">
-                            FITNESS
-                        </span>
+                            <h3>
+                                Frontier Jewellers Exclusive
+                            </h3>
 
-                        <h3>
-                            Fitness Factory Gym
-                        </h3>
+                            <p>
+                                A premium jewellery website
+                                focused on elegant presentation
+                                and product discovery.
+                            </p>
 
-                        <p>
-                            A modern gym website designed to showcase
-                            fitness programs, facilities and membership
-                            information.
-                        </p>
+                            <a
+                                href="https://harshitgairola.github.io/Frontier-Jewellers-Exclusive/"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Live Project ↗
+                            </a>
 
-                        <div class="technology-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
                         </div>
 
-                        <a
-                            href="https://harshitgairola.github.io/Fitness-factory-Gym/"
-                            class="project-link"
-                            target="_blank"
-                        >
-                            View Project →
-                        </a>
-
-                    </div>
-
-                </article>
+                    </article>
 
 
-                <!-- PROJECT 4 -->
-                <article class="project-card">
+                    <!-- GYM -->
 
-                    <div class="project-image">
+                    <article class="project-card">
 
-                        <img
-                            src="./image/web4.jpg"
-                            alt="Durga Thapa Boxing Academy website"
-                            onerror="this.style.display='none'"
-                        >
+                        <div class="project-image project-four">
 
-                        <div class="project-number">
-                            04
+                            <div class="project-overlay">
+
+                                <span>
+                                    FITNESS
+                                </span>
+
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="project-content">
 
-                    <div class="project-content">
+                            <p class="project-category">
+                                WEB DEVELOPMENT
+                            </p>
 
-                        <span class="project-type">
-                            SPORTS
-                        </span>
+                            <h3>
+                                Fitness Factory Gym
+                            </h3>
 
-                        <h3>
-                            Durga Thapa Boxing Academy
-                        </h3>
+                            <p>
+                                A fitness-focused website for
+                                presenting gym services,
+                                facilities and information.
+                            </p>
 
-                        <p>
-                            A boxing academy website designed to present
-                            training programs, academy information and
-                            boxing-related content.
-                        </p>
+                            <a
+                                href="https://harshitgairola.github.io/Fitness-factory-Gym/"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Live Project ↗
+                            </a>
 
-                        <div class="technology-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
                         </div>
 
-                        <a
-                            href="https://harshitgairola.github.io/Durga-Thapa-Boxing-Academy/"
-                            class="project-link"
-                            target="_blank"
-                        >
-                            View Project →
-                        </a>
-
-                    </div>
-
-                </article>
+                    </article>
 
 
-                <!-- PROJECT 5 -->
-                <article class="project-card">
+                    <!-- BOXING -->
 
-                    <div class="project-image">
+                    <article class="project-card">
 
-                        <img
-                            src="./image/web5.jpg"
-                            alt="Frontier Jewellers Exclusive website"
-                            onerror="this.style.display='none'"
-                        >
+                        <div class="project-image project-five">
 
-                        <div class="project-number">
-                            05
+                            <div class="project-overlay">
+
+                                <span>
+                                    SPORTS
+                                </span>
+
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="project-content">
 
-                    <div class="project-content">
+                            <p class="project-category">
+                                WEB DEVELOPMENT
+                            </p>
 
-                        <span class="project-type">
-                            JEWELLERY
-                        </span>
+                            <h3>
+                                Durga Thapa Boxing Academy
+                            </h3>
 
-                        <h3>
-                            Frontier Jewellers Exclusive
-                        </h3>
+                            <p>
+                                A sports academy website
+                                presenting training information,
+                                schedules and academy details.
+                            </p>
 
-                        <p>
-                            An elegant jewellery website created to
-                            showcase jewellery collections with a
-                            premium visual presentation.
-                        </p>
+                            <a
+                                href="https://harshitgairola.github.io/Durga-Thapa-Boxing-Academy/"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Live Project ↗
+                            </a>
 
-                        <div class="technology-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
                         </div>
 
-                        <a
-                            href="https://harshitgairola.github.io/Frontier-Jewellers-Exclusive/"
-                            class="project-link"
-                            target="_blank"
-                        >
-                            View Project →
-                        </a>
+                    </article>
 
-                    </div>
-
-                </article>
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- ================= SERVICES ================= -->
-        <section class="section services-section">
+        <!-- ================= EDUCATION ================= -->
 
-            <div class="section-heading">
+        <section class="section education-section" id="education">
 
-                <p>WHAT I DO</p>
+            <div class="container">
 
-                <h2>
-                    Web development focused on results.
-                </h2>
+                <div class="section-heading">
 
-            </div>
+                    <p>EDUCATION</p>
 
-
-            <div class="services-grid">
-
-                <div class="service-card">
-
-                    <span>01</span>
-
-                    <h3>
-                        Website Development
-                    </h3>
-
-                    <p>
-                        Creating complete websites from concept
-                        to finished product.
-                    </p>
+                    <h2>
+                        My academic
+                        <span>journey.</span>
+                    </h2>
 
                 </div>
 
 
-                <div class="service-card">
+                <div class="timeline">
 
-                    <span>02</span>
+                    <div class="timeline-item">
 
-                    <h3>
-                        Responsive Design
-                    </h3>
+                        <div class="timeline-dot"></div>
 
-                    <p>
-                        Building websites that adapt smoothly
-                        to different screen sizes.
-                    </p>
+                        <div class="timeline-content">
 
-                </div>
+                            <span>
+                                CURRENT
+                            </span>
+
+                            <h3>
+                                B.Tech — Computer Science &
+                                Engineering
+                            </h3>
+
+                            <p>
+                                Government B.Tech College,
+                                Gopeshwar
+                            </p>
+
+                            <small>
+                                3rd Year
+                            </small>
+
+                        </div>
+
+                    </div>
 
 
-                <div class="service-card">
+                    <div class="timeline-item">
 
-                    <span>03</span>
+                        <div class="timeline-dot"></div>
 
-                    <h3>
-                        Interactive Websites
-                    </h3>
+                        <div class="timeline-content">
 
-                    <p>
-                        Adding animations, interactions and
-                        JavaScript functionality.
-                    </p>
+                            <span>
+                                2023
+                            </span>
+
+                            <h3>
+                                Class 12 — CBSE
+                            </h3>
+
+                            <p>
+                                Successfully completed
+                                Class 12 under CBSE.
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -616,44 +808,70 @@
 
 
         <!-- ================= CONTACT ================= -->
+
         <section class="section contact-section" id="contact">
 
-            <div class="contact-card">
+            <div class="container">
 
-                <p class="contact-small">
-                    HAVE A PROJECT IN MIND?
-                </p>
+                <div class="contact-card">
 
-                <h2>
-                    Let's build something
-                    <span>great.</span>
-                </h2>
+                    <p class="contact-small">
+                        GET IN TOUCH
+                    </p>
 
-                <p>
-                    I'm always interested in creating new websites
-                    and working on interesting projects.
-                </p>
+                    <h2>
+                        Let's build something
+                        <span>great.</span>
+                    </h2>
 
-                <div class="contact-buttons">
+                    <p>
+                        Have a project, idea or opportunity?
+                        Feel free to get in touch with me.
+                    </p>
 
-                    <a
-                        href="mailto:gairolaharshit2@gmail.com"
-                        class="btn primary-btn"
-                    >
-                        Email Me 
-                    </a> 
-                    
-                    <a
-                        href="#projects"
-                        class="btn secondary-btn"
-                    >
-                        View Projects
-                    </a>
 
-                </div>
+                    <div class="contact-buttons">
 
-                <div class="email-address">
-                       gairolaharshit2@gmail.com
+                        <div class="contact-button-row">
+
+                            <a
+                                href="mailto:gairolaharshit2@gmail.com"
+                                class="btn primary-btn"
+                            >
+                                Email Me
+                            </a>
+
+                            <a
+                                href="https://github.com/HarshitGairola"
+                                class="btn secondary-btn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+
+                        </div>
+
+                        <div class="email-address">
+                            gairolaharshit2@gmail.com
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-details">
+
+                        <a href="tel:8679670159">
+                            📞 8679670159
+                        </a>
+
+                        <span>
+                            📍 Gopeshwar, Chamoli,
+                            Uttarakhand, India
+                        </span>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -664,35 +882,21 @@
 
 
     <!-- ================= FOOTER ================= -->
+
     <footer class="footer">
 
-        <div>
-
-            <a href="#home" class="logo">
-                Harshit<span>.</span>
-            </a>
+        <div class="container footer-container">
 
             <p>
-                Frontend Web Developer
+                © <span id="year"></span>
+                Harshit Gairola. All rights reserved.
             </p>
 
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#home">
+                Back to top ↑
+            </a>
 
         </div>
-
-
-        <p class="copyright">
-            © 2026 Harshit Gairola. All Rights Reserved.
-        </p>
 
     </footer>
 
